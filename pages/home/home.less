@@ -1,0 +1,131 @@
+.content {
+	padding: 15rpx;
+}
+
+// 头部搜索
+.header {
+	.search-input {
+		width: 249px;
+		height: 32px;
+		background: #F5F5F5;
+		border-radius: 18px;
+		padding-left: 15px;
+		margin-right: 24px;
+		font-size: 14px;
+		font-weight: 500;
+		color: #878890;
+		line-height: 20px;
+	}
+
+	image {
+		width: 24px;
+		height: 24px;
+	}
+
+	.lastImag {
+		margin-left: 24px;
+	}
+
+}
+
+// tab标签分类栏
+.tabbox {
+	text {
+		width: 30px;
+		height: 21px;
+		font-size: 15px;
+		color: #222222;
+		line-height: 21px;
+		white-space: nowrap;
+		padding: 10px;
+	}
+
+	text.active {
+		color: #222222;
+		font-weight: bold;
+	}
+}
+
+// 轮播图
+.lunbotu {
+	height: 400upx;
+	// swiper-item 里面的图片高度
+	
+	swiper-item image{
+		width: 100%;
+		height: 176px;
+		background: #CFCFCF;
+		border-radius: 6px;
+		
+	}
+}
+
+
+// 热门推荐
+.hotbox {
+	width: 100%;
+
+	.hotbox-item {
+		// 留了百分之4% 是4个 
+		// 3个就留百分之3% 
+		// 97%/3 = 31 
+
+		width: 32.3%;
+		margin-top: 15px;
+
+
+		.hotbox-item-imgbox {
+			position: relative;
+
+			text {
+				position: absolute;
+				right: 8px;
+				bottom: 6px;
+				width: 20px;
+				height: 16px;
+				font-size: 13px;
+				font-weight: 900;
+				color: #FFD049;
+				line-height: 16px;
+			}
+
+			image {
+				width: 100%;
+				height: 152px;
+			}
+		}
+
+	}
+
+	// 不是3的倍数就
+	// 除以2是因为第三个不算 2个宽度分1/2
+	.hotbox-item:not(:nth-child(3n)) {
+		margin-right: calc(3% / 2);
+	}
+	
+	.hot_end_txt{
+		margin-top: 10px;
+	}
+	
+	
+
+}
+
+.hotloading{
+	padding-top: 50px;
+	image{
+		width: 24px;
+		height: 24px;
+		animation: loading 3s linear infinite;
+	}
+	 @keyframes loading {
+	        /*以百分比来规定改变发生的时间 也可以通过"from"和"to",等价于0% 和 100%*/
+	        0% {
+	            /*rotate(2D旋转) scale(放大或者缩小) translate(移动) skew(翻转)*/
+	            transform: rotate(0deg);
+	        }
+	        100% {
+	            transform: rotate(360deg);
+	        }
+	    }
+}
